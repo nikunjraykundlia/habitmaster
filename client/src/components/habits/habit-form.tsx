@@ -113,32 +113,28 @@ export default function HabitForm() {
                   <FormLabel>Habit Type</FormLabel>
                   <FormControl>
                     <RadioGroup
-                      className="grid grid-cols-2 gap-3"
                       onValueChange={field.onChange}
                       defaultValue={field.value}
+                      className="grid grid-cols-2 gap-4"
                     >
-                      <div className={`border ${field.value === 'good' ? 'border-primary bg-primary bg-opacity-5' : 'border-neutral-200'} p-3 rounded-lg flex items-center cursor-pointer`}>
-                        <RadioGroupItem value="good" id="good" className="sr-only" />
-                        <label htmlFor="good" className="text-sm font-medium cursor-pointer flex items-center w-full">
-                          <div className={`w-4 h-4 border-2 rounded-full mr-2 flex items-center justify-center ${field.value === 'good' ? 'border-primary' : 'border-neutral-300'}`}>
-                            {field.value === 'good' && (
-                              <div className="w-2 h-2 bg-primary rounded-full"></div>
-                            )}
-                          </div>
+                      <FormItem>
+                        <RadioGroupItem value="good" id="r1" className="peer sr-only" />
+                        <FormLabel
+                          htmlFor="r1"
+                          className="flex items-center justify-center rounded-md border-2 border-muted bg-popover p-4 font-normal cursor-pointer hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary peer-data-[state=checked]:bg-primary peer-data-[state=checked]:text-primary-foreground"
+                        >
                           Build Good Habit
-                        </label>
-                      </div>
-                      <div className={`border ${field.value === 'bad' ? 'border-primary bg-primary bg-opacity-5' : 'border-neutral-200'} p-3 rounded-lg flex items-center cursor-pointer`}>
-                        <RadioGroupItem value="bad" id="bad" className="sr-only" />
-                        <label htmlFor="bad" className="text-sm font-medium cursor-pointer flex items-center w-full">
-                          <div className={`w-4 h-4 border-2 rounded-full mr-2 flex items-center justify-center ${field.value === 'bad' ? 'border-primary' : 'border-neutral-300'}`}>
-                            {field.value === 'bad' && (
-                              <div className="w-2 h-2 bg-primary rounded-full"></div>
-                            )}
-                          </div>
+                        </FormLabel>
+                      </FormItem>
+                      <FormItem>
+                        <RadioGroupItem value="bad" id="r2" className="peer sr-only" />
+                        <FormLabel
+                          htmlFor="r2"
+                          className="flex items-center justify-center rounded-md border-2 border-muted bg-popover p-4 font-normal cursor-pointer hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary peer-data-[state=checked]:bg-primary peer-data-[state=checked]:text-primary-foreground"
+                        >
                           Break Bad Habit
-                        </label>
-                      </div>
+                        </FormLabel>
+                      </FormItem>
                     </RadioGroup>
                   </FormControl>
                   <FormMessage />
@@ -180,7 +176,7 @@ export default function HabitForm() {
                 <FormItem>
                   <FormLabel>Preferred Time</FormLabel>
                   <FormControl>
-                    <Input type="time" {...field} />
+                    <Input type="time" {...field} value={field.value ?? ""} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -197,7 +193,7 @@ export default function HabitForm() {
                     <RadioGroup
                       className="flex items-center space-x-4"
                       onValueChange={field.onChange}
-                      defaultValue={field.value}
+                      value={field.value ?? ""}
                     >
                       <div className="flex items-center">
                         <RadioGroupItem value="easy" id="easy" className="sr-only" />
@@ -250,6 +246,7 @@ export default function HabitForm() {
                       placeholder="Add notes or details about this habit"
                       className="resize-none"
                       {...field}
+                      value={field.value ?? ""}
                     />
                   </FormControl>
                   <FormMessage />
@@ -264,7 +261,7 @@ export default function HabitForm() {
                 <FormItem className="flex items-center gap-2">
                   <FormControl>
                     <Switch
-                      checked={field.value}
+                      checked={field.value ?? false}
                       onCheckedChange={field.onChange}
                     />
                   </FormControl>
