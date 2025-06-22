@@ -1,0 +1,63 @@
+                   {/* Day details will be loaded here */}
+                    {habitCalendar?.days[format(date, 'yyyy-MM-dd')]?.habits?.length > 0 ? (
+                      <div className="space-y-4">
+                        {habitCalendar.days[format(date, 'yyyy-MM-dd')].habits.map((habit: any) => (
+                          <div key={habit.id} className="flex items-center justify-between border-b pb-3 last:border-0">
+                            <div className="flex items-center">
+                              <div className={`w-2 h-2 rounded-full ${habit.completed ? 'bg-success' : 'bg-neutral-300'} mr-3`}></div>
+                              <div>
+                                <p className="font-medium">{habit.name}</p>
+                                <p className="text-sm text-neutral-500">{habit.time}</p>
+                              </div>
+                            </div>
+                            <div>
+                              <Button
+                                variant={habit.completed ? "outline" : "default"}
+                                size="sm"
+                                className={habit.completed ? "text-success" : ""}
+                                onClick={() => {
+                                  if (!habit.completed) {
+                                    fetch(`/api/habits/${habit.id}/complete`, {
+                                      method: 'POST',
+                                      headers: { 'Content-Type': 'application/json' },
+                                      body: JSON.stringify({ 
+                                        date: format(date, 'yyyy-MM-dd')
+                                      })
+                                    }).then(() => {
+                                      // Invalidate relevant queries
+                                      queryClient.invalidateQueries({ queryKey: ['/api/calendar'] });
+                                      queryClient.invalidateQueries({ queryKey: ['/api/stats'] });
+                                      queryClient.invalidateQueries({ queryKey: ['/api/insights/data'] });
+                                      queryClient.invalidateQueries({ queryKey: ['/api/insights'] });
+                                      queryClient.invalidateQueries({ queryKey: ['/api/habits/today'] });
+                                      queryClient.invalidateQueries({ queryKey: ['/api/stats'] });
+                                      queryClient.invalidateQueries({ queryKey: ['/api/insights/data'] });
+                                      queryClient.invalidateQueries({ queryKey: ['/api/insights'] });
+                                      queryClient.invalidateQueries({ queryKey: ['/api/habits/today'] });
+                                    });
+                                  }
+                                }}
+                              >
+                                {habit.completed ? "Completed" : "Mark Complete"}
+                              </Button>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    ) : (
+                      <div className="text-center py-6 text-neutral-500">
+                        No habits scheduled for this day
+                      </div>
+                    )}
+                  </div>
+                )}
+              </CardContent>
+            </Card>
+          )}
+        </div>
+      </main>
+      
+      <MobileNav />
+    </div>
+  );
+}

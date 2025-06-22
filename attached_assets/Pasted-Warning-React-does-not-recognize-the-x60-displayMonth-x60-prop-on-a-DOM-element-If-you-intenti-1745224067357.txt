@@ -1,0 +1,43 @@
+Warning: React does not recognize the &#x60;displayMonth&#x60; prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase &#x60;displaymonth&#x60; instead. If you accidentally passed it from a parent component, remove it from the DOM element.
+    at div
+    at Day (https://87c2d26d-2925-4bf1-a93d-bffdc41fabb1-00-7nv97n6qjyyj.picard.replit.dev/src/pages/calendar.tsx:333:29)
+    at td
+    at tr
+    at Row (https://87c2d26d-2925-4bf1-a93d-bffdc41fabb1-00-7nv97n6qjyyj.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-day-picker.js?v=eab6f930:29295:12)
+    at tbody
+    at table
+    at Table (https://87c2d26d-2925-4bf1-a93d-bffdc41fabb1-00-7nv97n6qjyyj.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-day-picker.js?v=eab6f930:29347:12)
+    at div
+    at Month (https://87c2d26d-2925-4bf1-a93d-bffdc41fabb1-00-7nv97n6qjyyj.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-day-picker.js?v=eab6f930:29390:19)
+    at div
+    at Months (https://87c2d26d-2925-4bf1-a93d-bffdc41fabb1-00-7nv97n6qjyyj.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-day-picker.js?v=eab6f930:29419:12)
+    at div
+    at Root (https://87c2d26d-2925-4bf1-a93d-bffdc41fabb1-00-7nv97n6qjyyj.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-day-picker.js?v=eab6f930:29424:25)
+    at FocusProvider (https://87c2d26d-2925-4bf1-a93d-bffdc41fabb1-00-7nv97n6qjyyj.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-day-picker.js?v=eab6f930:28945:20)
+    at ModifiersProvider (https://87c2d26d-2925-4bf1-a93d-bffdc41fabb1-00-7nv97n6qjyyj.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-day-picker.js?v=eab6f930:28758:19)
+    at SelectRangeProvider (https://87c2d26d-2925-4bf1-a93d-bffdc41fabb1-00-7nv97n6qjyyj.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-day-picker.js?v=eab6f930:28593:31)
+    at SelectMultipleProvider (https://87c2d26d-2925-4bf1-a93d-bffdc41fabb1-00-7nv97n6qjyyj.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-day-picker.js?v=eab6f930:28498:34)
+    at SelectSingleProviderInternal (https://87c2d26d-2925-4bf1-a93d-bffdc41fabb1-00-7nv97n6qjyyj.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-day-picker.js?v=eab6f930:29034:25)
+    at SelectSingleProvider (https://87c2d26d-2925-4bf1-a93d-bffdc41fabb1-00-7nv97n6qjyyj.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-day-picker.js?v=eab6f930:29025:32)
+    at NavigationProvider (https://87c2d26d-2925-4bf1-a93d-bffdc41fabb1-00-7nv97n6qjyyj.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-day-picker.js?v=eab6f930:28338:19)
+    at DayPickerProvider (https://87c2d26d-2925-4bf1-a93d-bffdc41fabb1-00-7nv97n6qjyyj.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-day-picker.js?v=eab6f930:28171:28)
+    at RootProvider (https://87c2d26d-2925-4bf1-a93d-bffdc41fabb1-00-7nv97n6qjyyj.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/react-day-picker.js?v=eab6f930:29465:24)
+    at DayPicker
+    at Calendar (https://87c2d26d-2925-4bf1-a93d-bffdc41fabb1-00-7nv97n6qjyyj.picard.replit.dev/src/components/ui/calendar.tsx:22:3)
+    at div
+    at _c9 (https://87c2d26d-2925-4bf1-a93d-bffdc41fabb1-00-7nv97n6qjyyj.picard.replit.dev/src/components/ui/card.tsx:114:12)
+    at div
+    at _c (https://87c2d26d-2925-4bf1-a93d-bffdc41fabb1-00-7nv97n6qjyyj.picard.replit.dev/src/components/ui/card.tsx:20:11)
+    at div
+    at main
+    at div
+    at Calendar (https://87c2d26d-2925-4bf1-a93d-bffdc41fabb1-00-7nv97n6qjyyj.picard.replit.dev/src/pages/calendar.tsx:44:27)
+    at Route (https://87c2d26d-2925-4bf1-a93d-bffdc41fabb1-00-7nv97n6qjyyj.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/wouter.js?v=eab6f930:323:16)
+    at ProtectedRoute (https://87c2d26d-2925-4bf1-a93d-bffdc41fabb1-00-7nv97n6qjyyj.picard.replit.dev/src/lib/protected-route.tsx:22:3)
+    at Switch (https://87c2d26d-2925-4bf1-a93d-bffdc41fabb1-00-7nv97n6qjyyj.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/wouter.js?v=eab6f930:379:17)
+    at Router
+    at AuthProvider (https://87c2d26d-2925-4bf1-a93d-bffdc41fabb1-00-7nv97n6qjyyj.picard.replit.dev/src/hooks/use-auth.tsx:26:32)
+    at Provider (https://87c2d26d-2925-4bf1-a93d-bffdc41fabb1-00-7nv97n6qjyyj.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-XJYQQN2S.js?v=eab6f930:22:15)
+    at TooltipProvider (https://87c2d26d-2925-4bf1-a93d-bffdc41fabb1-00-7nv97n6qjyyj.picard.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=eab6f930:61:5)
+    at App
+    at QueryClientProvider…
